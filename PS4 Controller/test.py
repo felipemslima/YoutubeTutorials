@@ -1,5 +1,6 @@
 import pygame
 import json, os
+import time
 
 ################################# LOAD UP A BASIC WINDOW #################################
 pygame.init()
@@ -60,7 +61,7 @@ while running:
         #HANDLES ANALOG INPUTS
         if event.type == pygame.JOYAXISMOTION:
             analog_keys[event.axis] = event.value
-            # print(analog_keys)
+            #print(analog_keys)
             # Horizontal Analog
             if abs(analog_keys[0]) > .4:
                 if analog_keys[0] < -.7:
@@ -86,6 +87,7 @@ while running:
                 color += 2
             if analog_keys[5] > 0:  # Right Trigger
                 color -= 2
+    
 
 
 
